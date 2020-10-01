@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/applogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Screens.LayoutTwoActivity"/>
+        <activity android:name=".Screens.Settings"
+            android:label="@string/settings"/>
+        <activity android:name=".Screens.LayoutTwoActivity" />
         <activity android:name=".Screens.LayoutOneActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
