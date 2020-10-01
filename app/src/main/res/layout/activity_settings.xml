@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Screens.Settings"
     android:orientation="vertical"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp">
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +32,7 @@
         android:textStyle="bold"
         android:text="@string/contest_platforms"
         android:textColor="@color/white"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
 
     <CheckBox
         android:id="@+id/cb_codeforces"
@@ -60,6 +77,22 @@
         android:checked="true"
         android:textSize="18sp"
         android:text="@string/atcoder"/>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -68,7 +101,7 @@
         android:textStyle="bold"
         android:text="@string/time_format"
         android:textColor="@color/white"
-        android:layout_marginTop="20dp"/>
+     />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:layout_marginTop="10dp"
@@ -86,5 +119,91 @@
         android:textSize="18sp"
         android:text="@string/hr_24_format"/>
 
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-</LinearLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="@string/notification"
+                android:textColor="@color/white"
+                />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_marginTop="10dp"
+                android:id="@+id/switch_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textSize="18sp"
+                android:text="@string/enable_notif"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="@string/contest_duration"
+                android:textColor="@color/white"
+                />
+
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup"
+                android:checkedButton="@+id/rb_week_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <RadioButton
+                android:textSize="18sp"
+                android:id="@+id/rb_week_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/week_1"/>
+            <RadioButton
+                android:textSize="18sp"
+                android:id="@+id/rb_week_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/week_2"/>
+            <RadioButton
+                android:textSize="18sp"
+                android:id="@+id/rb_month_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/month_1"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
